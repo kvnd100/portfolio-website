@@ -1,0 +1,11 @@
+
+.footer-text {
+    margin: 0;
+}
+
+.footer {
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    padding: 20px;
+    text-align: center;
+}

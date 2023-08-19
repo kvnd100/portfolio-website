@@ -1,5 +1,5 @@
 import "./../styles/about.css";
-import Avatar from "../assets/portrait-beautiful-young-woman-standing-grey-wall.jpg";
+import Avatar from "../assets/portrait.jpg";
 const About = () => {
   return (
     <section id="about" className="about">

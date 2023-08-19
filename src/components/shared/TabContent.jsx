@@ -1,9 +1,17 @@
 import uuid from "react-uuid";
-const TabContent = ({ duration, label, position, content }) => {
+const TabContent = ({ url, duration, label, position, content }) => {
+  console.log(url);
   return (
     <div className="tab-content">
       <h3 className="tab-content-header">
-        {position} <span className="tab-content-company">@ {label}</span>
+        {position}{" "}
+        <span className="tab-content-company">
+          @{" "}
+          <a href={url} target="_blank" rel="noreferrer">
+            {" "}
+            {label}
+          </a>
+        </span>
       </h3>
       <p className="tab-content-duration">{duration}</p>
       <div>

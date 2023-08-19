@@ -86,3 +86,12 @@ width: max-content;
     left: 0px;
     color: var(--primary-color);
   }
+
+  .tabs-content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .tabs-content.hidden {
+    opacity: 0;
+  }

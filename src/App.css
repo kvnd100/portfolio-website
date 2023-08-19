@@ -124,3 +124,13 @@ section{
   margin-left: 20px;
   background-color: var(--lightest-slate);
 }
+
+
+a,
+a:active,
+a:focus,a:hover {
+  text-decoration: none;
+  color: inherit;
+  outline: none; 
+  cursor: pointer; 
+}

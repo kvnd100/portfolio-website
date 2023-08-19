@@ -11,6 +11,7 @@ const tabsData = [
     ],
     duration: "September - March 2023",
     position: "Intern Software Engineer",
+    url: "https://syntaxgenie.com/",
   },
 ];
 

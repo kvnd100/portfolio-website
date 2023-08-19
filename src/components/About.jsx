@@ -1,5 +1,5 @@
 import "./../styles/about.css";
-import Avatar from "../assets/portrait.jpg";
+import Avatar from "../assets/girl.jpg";
 const About = () => {
   return (
     <section id="about" className="about">

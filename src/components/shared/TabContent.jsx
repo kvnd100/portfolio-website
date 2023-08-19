@@ -1,6 +1,5 @@
 import uuid from "react-uuid";
 const TabContent = ({ url, duration, label, position, content }) => {
-  console.log(url);
   return (
     <div className="tab-content">
       <h3 className="tab-content-header">

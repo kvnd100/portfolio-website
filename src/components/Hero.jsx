@@ -14,7 +14,7 @@ const Hero = () => {
       </div>
       <div>
         <p>
-          I&apos;m an undergraduate specializing in crafting impactful digital experiences with a
+          I’m an undergraduate specializing in crafting impactful digital experiences with a
           user-centric approach. Fueled by dedication, I contribute to exceptional digital solutions
           while on my academic journey.
         </p>

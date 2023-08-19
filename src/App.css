@@ -1,5 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css2?family=YourFontFamily&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calibre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@font-face {
+  font-family: 'SF Mono';
+  src: url('https://apple.sfomono.net/SFMono-Regular.woff2') format('woff2');
+}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 :root {
   --primary-color: rgba(0, 174, 239, 1);
   --background-color: rgba(0, 0, 0, 1); 
@@ -32,10 +39,7 @@
   --fz-heading: 32px;
   --nav-height:100px;
   --border-radius:3px;
-}
-
-*{
-  box-sizing: inherit;
+  --tab-height: 42px;
 }
 
 body {

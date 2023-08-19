@@ -1,9 +1,10 @@
 import "./../styles/about.css";
 import Avatar from "../assets/girl.jpg";
+import SubHeading from "./shared/subHeading";
 const About = () => {
   return (
     <section id="about" className="about">
-      <h2 className="numbered-heading">About Me</h2>
+      <SubHeading heading={"About Me"} />
       <div className="about-content">
         <div className="about-text">
           <div>

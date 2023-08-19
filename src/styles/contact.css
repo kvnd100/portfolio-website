@@ -1,0 +1,61 @@
+.contact{
+    max-width: 600px;
+    margin: 0px auto 100px;
+    text-align: center;
+}
+
+
+.contact-heading{
+    display: block!important;
+    margin-bottom: 5px!important;
+    color: var(--primary-color)!important;
+    font-family: var(--font-mono)!important;
+    font-size: var(--fz-md)!important;
+    font-weight: 400!important;
+}
+
+.contact-heading::after{
+    font-size: var(--fz-md)!important;
+    content: none !important;
+}
+.contact-heading::before{
+    font-size: var(--fz-md) !important;
+    bottom: 0!important;
+
+}
+.contact-title{
+    font-size: clamp(40px, 5vw, 60px);
+    margin: 0px 0px 10px;
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+}
+
+.contact > p{
+    font-size: var(--fz-lg);
+    margin:0;
+    margin-bottom: 4em;
+}
+
+.contact-email{
+
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fz-sm);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+
+
+}
+
+.contact-email:hover,.contact-email:hover:active{
+    background-color: rgba(0, 174, 239, .5);
+    outline: none;
+    color: var(--primary-color);
+}

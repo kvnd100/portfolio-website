@@ -50,6 +50,8 @@
     
   }
   
+
+
   .navbar a:hover {
     color: var(--primary-color);
 
@@ -81,6 +83,10 @@
 
 }
 
+.btn-resume::before{
+  content: ""!important;
+}
+
 .btn-resume:hover{
     background-color: rgba(0, 174, 239, .5);
     border: 1px solid var(--primary-color);
@@ -92,3 +98,4 @@
     outline: none; 
     border: 1px solid var(--primary-color);
 }
+

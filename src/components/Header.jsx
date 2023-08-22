@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src={myLogo} alt="SVG logo image" width="60" height="60" />
+        <a href="/">
+          <img src={myLogo} alt="SVG logo image" width="60" height="60" />
+        </a>
       </div>
       <nav className="navbar">
         <ul>
@@ -21,7 +23,7 @@ const Header = () => {
           </li>
           <li>
             <Link to="work" smooth={true} duration={500}>
-              Work
+              Projects
             </Link>
           </li>
           <li>
@@ -30,9 +32,14 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <button className="btn-resume" target="_blank">
+            <a
+              className="btn-resume"
+              target="_blank"
+              href="https://drive.google.com/file/d/1UQmZBPAo17c5bZ-3o9YBGpxGRqFhtcRK/view?usp=drive_link"
+              rel="noreferrer"
+            >
               Resume
-            </button>
+            </a>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,5 @@
 import "./../styles/about.css";
-import Avatar from "../assets/girl.jpg";
+import Avatar from "../assets/profile.jpg";
 import SubHeading from "./shared/subHeading";
 const About = () => {
   return (

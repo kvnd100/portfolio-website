@@ -1,9 +1,14 @@
 import { Link } from "react-scroll";
 import "../styles/header.css";
 import myLogo from "../assets/K.svg";
+import myLogo2 from "../assets/K2.svg"
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
+import { useTheme } from '../contexts/ThemeContext';;
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const hamburgerBtnHandlder = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,10 +25,12 @@ const Header = () => {
       contentAndFooter.forEach((element) => {
         element.classList.add("blur-body");
       });
+      document.body.style.overflow = 'hidden';
     } else {
       contentAndFooter.forEach((element) => {
         element.classList.remove("blur-body");
       });
+      document.body.style.overflow = 'unset';
     }
   }, [isMenuOpen]);
 
@@ -31,7 +38,7 @@ const Header = () => {
     <header className={`header ${isMenuOpen ? "blur-header" : ""}`}>
       <div className="logo">
         <a href="/">
-          <img src={myLogo} alt="SVG logo image" width="60" height="60" />
+          <img src={theme=="blue"?myLogo:myLogo2} alt="SVG logo image" width="60" height="60" />
         </a>
       </div>
       <nav className="navbar">
@@ -61,13 +68,16 @@ const Header = () => {
               <a
                 className="btn-resume"
                 target="_blank"
-                href="https://drive.google.com/file/d/1UQmZBPAo17c5bZ-3o9YBGpxGRqFhtcRK/view?usp=drive_link"
+                href="https://drive.google.com/file/d/138UIWHELwpd6Dk21LtH6mtSPUYndtJky/view?usp=sharing"
                 rel="noreferrer"
               >
                 Resume
               </a>
             </li>
           </ul>
+        </div>
+        <div className="theme-toggle-desktop">
+          <ThemeToggle />
         </div>
         <div className="ham">
           <button className="ham_button" onClick={hamburgerBtnHandlder}>
@@ -76,7 +86,7 @@ const Header = () => {
             </div>
           </button>
           <aside className={`ham_menu ${isMenuOpen ? "ham_menu-active" : ""}`}>
-            <nav className="ham_menu_inner ">
+            <nav className="ham_menu_inner">
               <ul>
                 <li>
                   <Link to="about" onClick={closeMenu} smooth={true} duration={500}>
@@ -109,6 +119,9 @@ const Header = () => {
                   </a>
                 </li>
               </ul>
+              <div className="theme-toggle-mobile">
+                <ThemeToggle />
+              </div>
             </nav>
           </aside>
         </div>

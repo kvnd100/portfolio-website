@@ -14,10 +14,15 @@ const Hero = () => {
       </div>
       <div>
         <p>
-          I’m an undergraduate specializing in crafting impactful digital experiences with a
+          I’m a postgraduate specializing in crafting impactful digital experiences with a
           user-centric approach. Fueled by dedication, I contribute to exceptional digital solutions
           while on my academic journey.
         </p>
+      </div>
+      <div>
+        <a href="#work" className="hero-cta">
+          Explore My Work
+        </a>
       </div>
     </section>
   );

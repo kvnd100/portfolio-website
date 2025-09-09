@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 50px;
+    align-items: start;
 }
 
 .about-text{
@@ -12,6 +13,7 @@
 .about-img-container{
     position: relative;
     max-width: 300px;
+    justify-self: center;
 }
 
 .about-img-container>div{
@@ -22,7 +24,6 @@
     width: 100%;
     border-radius: var(--border-radius);
     margin-top: 1.5rem;
-
 }
 
 .image-wrapper::after{
@@ -37,25 +38,27 @@
     height: 100%;
     border-radius: var(--border-radius);
     transition: var(--transition);
-    
 }
+
 .image-wrapper:hover::after {
     opacity: 1;
     top: 10px; 
     left: 15px;
-  }
+}
 
 .about-img{
     object-fit: cover;
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    aspect-ratio: 1;
     filter: grayscale(100%);
+    border-radius: var(--border-radius);
 }
 
 .about-img:hover{
     filter: none;
 }
-
 
 .custom-list {
     list-style: none;
@@ -63,17 +66,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
     padding: 0;
-  }
-  
-  
-  .custom-list li {
+}
+
+.custom-list li {
     position: relative;
     padding-left: 30px;
     margin-bottom: 10px;
-  }
-  
-  
-  .custom-list li::before {
+}
+
+.custom-list li::before {
     content: "▹"; 
     position: absolute;
     left: 0;
@@ -81,4 +82,63 @@
     font-size: var(--fz-md);
     color: var(--primary-color); 
     font-weight: bold;
-  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-text {
+        font-size: var(--fz-lg);
+    }
+    
+    .about-img-container {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .about-img {
+        max-width: 250px;
+    }
+    
+    .custom-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .custom-list li {
+        padding-left: 25px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        gap: 20px;
+    }
+    
+    .about-text {
+        font-size: var(--fz-md);
+    }
+    
+    .about-img-container {
+        max-width: 200px;
+    }
+    
+    .about-img {
+        max-width: 200px;
+    }
+    
+    .custom-list li {
+        padding-left: 20px;
+        margin-bottom: 6px;
+        font-size: var(--fz-sm);
+    }
+    
+    .custom-list li::before {
+        font-size: var(--fz-sm);
+    }
+}

@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header className={`header ${isMenuOpen ? "blur-header" : ""}`}>
       <div className="logo">
-        <a href="/">
+        <a href="https://kvnd100.github.io/portfolio-website/">
           <img src={theme=="blue"?myLogo:myLogo2} alt="SVG logo image" width="60" height="60" />
         </a>
       </div>
